@@ -1,0 +1,22 @@
+.city-img {
+    max-width:100%;
+
+
+}
+
+/* (52,58,64,1) */
+
+.city-container {
+    background-size:cover;
+    min-height:70vh;
+    
+}
+
+.custom-card {
+   background-color: rgba(52,58,64,0.5)
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    
+    opacity: 1 !important;
+}

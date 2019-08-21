@@ -1,0 +1,24 @@
+<div class="city-container pt-5" [ngStyle]="{ 'background-image': 'url(' + cityRoutes[cityRoute].image + ')' }">
+    <!-- <img class="city-img" src="{{cityRoutes[cityRoute].image}}"> -->
+    <!-- <p>{{weather | json}}</p> -->
+    <div class="card w-50 mx-auto custom-card text-white">
+        <div class="card-header"><h2>{{cityName}}</h2></div>
+        <div class="card-body row d-flex">
+            <div class="col-6 text-center">
+                <h1 class="pr-1 mb-0 pb-0">{{ weather.temp }}&deg;F</h1>
+                <div class="d-flex justify-content-around">
+                    <img *ngFor="let condition of weather.status" src="https://openweathermap.org/img/wn/{{condition.icon}}@2x.png">
+                </div>
+                <div class="d-flex justify-content-around">
+                    <h5 *ngFor="let condition of weather.status">{{condition.main}}</h5>
+                </div>
+            </div>
+            <div class="col-6 d-flex flex-column justify-content-center">
+                <p>Humidity: {{ weather.humidity }}</p>
+                <p>Wind Speed: {{ weather.wind.speed }} m/h</p>
+                <p>Wind Direction: {{ weather.wind.deg }} deg</p>
+            </div>
+        </div>
+    </div>
+    
+</div>
